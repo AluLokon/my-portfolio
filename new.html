@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lokon's Portfolio</title>
+  <link rel="stylesheet" href="st.css">
+  <!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Typing effect ke liye -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <!-- Dark/Light Mode Toggle -->
+<div class="theme-toggle">
+    <input type="checkbox" id="toggle-switch">
+    <label for="toggle-switch" class="toggle-label">
+      🌙
+    </label>
+  </div>
+
+
+  
+
+  
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="home-section">
+    <div class="home-content">
+      <h1>Hi, I'm <span class="name">Lokon</span></h1>
+      <h2>I'm a <span id="typed"></span></h2>
+      <a href="#contact" class="btn">Contact Me</a>
+      <a href="mycv.pdf" download class="btn">📄 Download CV</a>
+      <br>
+       <br>
+       <br>
+          <!-- ------time-------- -->
+  <div id="clock"></div>
+    </div>
+    <br>
+  
+
+
+    <div class="home-img">
+        <a href="profile.html" target="_blank">
+          <img src="lu.jpg" alt="My Photo">
+        </a>
+      </div>
+      
+  </section>
+
+
+  <!-- -----photo animate----- -->
+
+  
+
+
+
+
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I'm <span class="name">Lokon</span>, a B.Tech student at NIST University, passionate about 
+      technology and problem-solving. I enjoy building creative and user-friendly 
+      web applications, and my aim is to become a skilled Web Developer.  
+    </p>
+    <p>
+      I have worked on exciting projects like a <b>Movie Recommender System</b>, 
+      <b>Indian E-commerce Data Analysis</b>, and a <b>Medicine Reminder & Tracker App</b>.  
+      These projects helped me improve my coding, data analysis, and web development skills.  
+    </p>
+    <p>
+      Apart from coding, I’m constantly learning new technologies to improve myself 
+      and stay updated with industry trends.  
+    </p>
+  </section>
+  
+  <!-- ------------Skill------------- -->
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+  
+      <div class="skill-category">
+        <h3>Languages</h3>
+        <p>Python, Java</p>
+      </div>
+  
+      <div class="skill-category">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JavaScript, Node.js, React.js</p>
+      </div>
+  
+      <div class="skill-category">
+        <h3>Database</h3>
+        <p>MySQL, MongoDB</p>
+      </div>
+  
+      <div class="skill-category">
+        <h3>Tools & Platforms</h3>
+        <p>Tableau, Excel, Jupyter Notebook, VS Code, IntelliJ IDEA, Git/GitHub</p>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    
+    <div class="project-card">
+      <h3>Movie Recommender System</h3>
+      <p>A machine learning-based system that suggests movies based on user preferences using collaborative filtering and content-based methods.</p>
+      <p><b>Tech Stack:</b> Python, Pandas, Scikit-learn, Streamlit</p>
+      <ul>
+        <li>Personalized movie recommendations</li>
+        <li>User-friendly web app using Streamlit</li>
+        <li>Top 5 movies shown instantly based on user input</li>
+      </ul>
+      <a href="https://github.com/yourusername/movie-recommender" target="_blank">🔗 View Project</a>
+    </div>
+  
+    <div class="project-card">
+      <h3>E-commerce Data Analysis</h3>
+      <p>Analyzed Indian e-commerce sales dataset to extract insights about customer behavior, sales trends, and top-performing categories.</p>
+      <p><b>Tech Stack:</b> Python, Pandas, Matplotlib, Tableau</p>
+      <ul>
+        <li>Exploratory Data Analysis (EDA)</li>
+        <li>Interactive Tableau Dashboard</li>
+        <li>Actionable business insights generated</li>
+      </ul>
+      <a href="https://github.com/yourusername/ecommerce-analysis" target="_blank">🔗 View Project</a>
+    </div>
+  
+  </section>
+  
+  <!-- Contact Section -->
+  <!-- Contact Section -->
+<section id="contact">
+    <h2>📞 Contact Me</h2>
+    <div class="contact-container">
+      
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/https://www.linkedin.com/in/alu-lokon-6883b7303" target="_blank" class="contact-link">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+  
+      <!-- GitHub -->
+      <a href="https://github.com/" target="_blank" class="contact-link">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+  
+      <!-- Instagram -->
+      <a href="https://instagram.com/_ALU_LOKON_" target="_blank" class="contact-link">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+  
+      <!-- Phone -->
+      <a href="tel:+917849022053" class="contact-link">
+        <i class="fas fa-phone"></i> +91 7849022053
+      </a>
+  
+    </div>
+  </section>
+
+  <!-- -----animated skill--------- -->
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <canvas id="skillChart" width="400" height="200"></canvas>
+  </section>
+  
+  
+  
+  <script>
+    // Typing Animation
+    var typed = new Typed("#typed", {
+      strings: ["Web Developer", "Data Analyst", "Backend Developer"],
+      typeSpeed: 70,
+      backSpeed: 50,
+      loop: true
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+
+
+<!-- ---animated skill----- -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const ctx = document.getElementById('skillChart').getContext('2d');
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['java', 'JavaScript', 'React', 'MySQL', 'Node.js'],
+    datasets: [{
+      label: 'Skill Level (%)',
+      data: [90, 80, 70, 75, 65],
+      backgroundColor: [
+        '#4CAF50',
+        '#f0db4f',
+        '#61dafb',
+        '#00758f',
+        '#68a063'
+      ]
+    }]
+  },
+  options: {
+    responsive: true,
+    animation: {
+      duration: 2000
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 100
+      }
+    }
+  }
+});
+</script>
+<!-- -----time------- -->
+<script>
+    function updateClock() {
+      let now = new Date();
+      let hours = String(now.getHours()).padStart(2, '0');
+      let minutes = String(now.getMinutes()).padStart(2, '0');
+      let seconds = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById("clock").textContent = `${hours}:${minutes}:${seconds}`;
+    }
+  
+    setInterval(updateClock, 1000);
+    updateClock(); // run immediately
+  </script>
+
+
+    
+
+
+
+  <script>
+    const toggleSwitch = document.getElementById('toggle-switch');
+    const body = document.body;
+  
+    toggleSwitch.addEventListener('change', () => {
+      body.classList.toggle('light-mode');
+    });
+  </script>
+  
+</body>
+</html>

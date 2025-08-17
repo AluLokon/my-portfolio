@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lokon Profile</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background: #0d0d0d;
+      color: white;
+      min-height: 100vh;
+    }
+
+    .profile-img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      margin-top: 40px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .profile-img::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      right: -15px;
+      bottom: -15px;
+      border-radius: 50%;
+      background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet, red);
+      background-size: 400% 400%;
+      animation: rgbGlow 6s linear infinite;
+      filter: blur(12px);
+      z-index: -1;
+    }
+
+    .profile-img img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #111;
+    }
+
+    @keyframes rgbGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .details {
+      margin-top: 20px;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .details h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #ff4d4d;
+      text-shadow: 0 0 10px #ff4d4d;
+    }
+
+    .details p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .contact-form {
+      margin-top: 30px;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+      text-align: center;
+    }
+
+    .contact-form h2 {
+      margin-bottom: 15px;
+      color: cyan;
+      text-shadow: 0 0 10px cyan;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .contact-form button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background: cyan;
+      color: black;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .contact-form button:hover {
+      background: lime;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-img">
+    <img src="cortph.jpg" alt="My Photo">
+  </div>
+
+  <div class="details">
+    <h1>Lokon Allu</h1>
+    <p>
+      Hi, I’m Lokon 👋 <br>
+      B.Tech Student @ NIST University | Aspiring Web Developer & Data Analyst.<br>
+      Skills: Python, Java, HTML, CSS, JavaScript, React, Node.js, MySQL, MongoDB.<br>
+      Tools: VS Code, Excel, Tableau, Jupyter, IntelliJ IDEA.
+    </p>
+  </div>
+
+  <div class="contact-form">
+    <h2>Contact Me</h2>
+    <form action="/save-contact" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="tel" name="phone" placeholder="Your Phone Number" required><br>
+      <textarea name="problem" placeholder="Your Problem..." rows="5" required></textarea><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
